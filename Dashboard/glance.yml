@@ -1,0 +1,601 @@
+theme:
+  background-color: 50 1 6
+  primary-color: 209 88 54
+  positive-color: 209 88 54
+  negative-color: 51 33 68
+
+branding:
+  custom-footer: |
+    <p>Dirección de Redes y Servidores | STxD</p>
+  logo-url: https://raw.githubusercontent.com/ncvega/UNCuyo/refs/heads/main/logo-500x500.png
+  favicon-url: https://raw.githubusercontent.com/ncvega/UNCuyo/refs/heads/main/logo-500x500.png
+
+pages:
+  - name: Home
+    columns:
+      - size: small
+        widgets:
+          - type: calendar
+
+          - type: bookmarks
+            groups:
+              - title: Herramientas
+                links:
+                  - title: IT Tools
+                    url: https://it-tools.tech/
+                  - title: Calculadora IP
+                    url: https://aprendaredes.com/cgi-bin/ipcalc/ipcalc_cgi1
+                  - title: IP Info
+                    url: https://ipinfo.io/
+                  - title: MAC Vendors
+                    url: https://maclookup.app/
+                  - title: Diagrams
+                    url: https://app.diagrams.net/
+                  - title: SPAM Database Lookup
+                    url: https://www.dnsbl.info
+
+              - title: Looking Glass
+                links:
+                  - title: CABASE
+                    url: http://looking.cabase.org.ar/cgi-bin/lg.cgi
+                  - title: Hurricane Electric's
+                    url: https://lg.he.net/
+                  - title: BGP Tools
+                    url: https://bgp.tools/
+
+      - size: full
+        widgets:
+          - type: bookmarks
+            groups:
+              - title: Sistemas 
+                links:
+                  - title: Diaguita
+                    url: http://diaguita.intranet.uncu.edu.ar
+                  - title: SUDOKU
+                    url: http://siu.intranet.uncu.edu.ar
+              - title: Monitoreo 
+                links:
+                  - title: Nagios
+                    url: http://monitor.intranet.uncu.edu.ar/nagios3/
+                  - title: CACTI
+                    url: http://monitor.intranet.uncu.edu.ar/cacti/
+              - title: VPN 
+                links:
+                  - title: Solicitud VPN
+                    url: http://vpn.uncu.edu.ar/
+              - title: Correo Electrónico 
+                links:
+                  - title: Webmail
+                    url: https://webmail.uncu.edu.ar/SOGo/
+                  - title: Cambio de Clave
+                    url: http://altas.uncu.edu.ar/
+          - type: rss
+            title: Novedades
+            style: detailed-list
+            feeds:
+              - url: https://www.uncuyo.edu.ar/transformaciondigital/rss
+                title: Transformación Digital
+
+      - size: small
+        widgets:
+
+          - type: monitor
+            cache: 180m
+            title: Documentación
+            sites:
+              - title: Bookstack Wiki
+                url: https://wiki.noc.uncu.net.ar
+                icon: si:bookstack
+              - title: Netbox DCIM
+                url: https://netbox.noc.uncu.net.ar
+                icon: si:hackthebox
+              - title: Bitwarden
+                url: https://nodopass.uncu.edu.ar/
+                icon: si:bitwarden
+              - title: NODO Nextcloud
+                url: https://nodocloud.uncu.edu.ar/index.php/login
+                icon: si:nextcloud
+
+          - type: monitor
+            cache: 180m
+            title: Monitoreo
+            sites:
+              - title: Zabbix
+                url: https://zabbix.noc.uncu.net.ar
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/zabbix.png
+              - title: Grafana
+                url: https://grafana.noc.uncu.net.ar
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/grafana.png
+              - title: Uptime
+                url: https://uptime.noc.uncu.net.ar
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/uptime-kuma.svg
+
+          - type: monitor
+            cache: 180m
+            title: Management
+            sites:
+              - title: UniFi Controller
+                url: https://unifi.intranet.uncu.edu.ar:8443
+                icon: si:ubiquiti
+              - title: Proxmox Cluster
+                url: https://hv-1.noc.uncu.net.ar
+                icon: si:proxmox
+              - title: Portainer
+                url: https://portainer.noc.uncu.net.ar
+                icon: si:docker
+              - title: Proxy Manager
+                url: https://proxy.noc.uncu.net.ar
+                icon: si:nginxproxymanager
+
+
+
+
+  - name: Routers
+    columns:
+    - size: full
+      widgets:
+
+        - type: monitor
+          cache: 1m
+          title: NODO - Rectorado
+          sites:
+            - title: RTR NODO
+              url: http://172.22.136.35
+              icon: si:mikrotik
+            - title: RTR Enlaces 1
+              url: http://172.22.136.31
+              icon: si:mikrotik
+            - title: RTR Enlaces 2
+              url: http://172.22.136.32
+              icon: si:mikrotik
+            - title: RTR Enlaces 3
+              url: http://172.22.136.33
+              icon: si:mikrotik
+            - title: RTR Enlaces 4
+              url: http://172.22.136.34
+              icon: si:mikrotik
+            - title: RTR TIP
+              url: http://172.22.136.27
+              icon: si:mikrotik
+            - title: RTR NOCs
+              url: http://172.22.136.200
+              icon: si:mikrotik
+
+        - type: monitor
+          cache: 10m
+          title: Colegios
+          sites:
+            - title: RTR Magisterio
+              url: http://172.17.251.6
+              icon: si:mikrotik
+            - title: RTR Martin Zapata
+              url: http://172.23.252.10
+              icon: si:mikrotik
+            - title: RTR DAD
+              url: http://172.23.252.198
+              icon: si:mikrotik
+            - title: RTR LAE
+              url: http://172.22.252.123
+              icon: si:mikrotik
+            - title: RTR CUC
+              url: http://172.23.252.14
+              icon: si:mikrotik
+
+        - type: monitor
+          cache: 10m
+          title: Unidades Academicas
+          sites:
+
+            - title: RTR Artes
+              url: http://172.22.136.53
+              icon: si:mikrotik
+
+            - title: RTR BACT
+              url: http://172.23.252.173
+              icon: si:mikrotik
+
+            - title: RTR CUE
+              url: http://172.23.252.134
+              icon: si:mikrotik
+
+            - title: RTR CLE
+              url: http://172.17.251.10
+              icon: si:mikrotik
+
+            - title: RTR Comedor
+              url: http://172.17.252.36
+              icon: si:mikrotik
+
+            - title: RTR Deportes
+              url: http://172.23.240.1
+              icon: si:mikrotik
+
+            - title: RTR Derecho
+              url: http://172.23.240.1
+              icon: si:mikrotik
+
+            - title: RTR EDIUNC
+              url: http://172.17.251.18
+              icon: si:mikrotik
+
+            - title: RTR FED Centro
+              url: http://172.23.252.70
+              icon: si:mikrotik
+
+            - title: RTR FED CAMPUS
+              url: http://172.23.252.118
+              icon: si:mikrotik
+
+            - title: RTR Escuela de Agricultura
+              url: http://172.23.252.38
+              icon: si:mikrotik
+
+            - title: RTR FCAI
+              url: http://172.23.252.62
+              icon: si:mikrotik
+
+            - title: RTR ECT - FCEN - ITU Redes
+              url: http://172.23.252.2
+              icon: si:mikrotik
+
+            - title: RTR FCEN Tupungato
+              url: http://172.23.252.50
+              icon: si:mikrotik
+
+            - title: RTR FCEN Malargüe
+              url: http://172.23.252.46
+              icon: si:mikrotik
+
+            - title: RTR FCEN San Martín
+              url: http://172.23.252.142
+              icon: si:mikrotik
+
+            - title: RTR Hospital Universitario
+              url: http://172.23.252.54
+              icon: si:mikrotik
+
+            - title: RTR ITU San Martín
+              url: http://172.23.252.94
+              icon: si:mikrotik
+
+            - title: RTR Campus Luján
+              url: http://172.22.252.178
+              icon: si:mikrotik
+
+            - title: RTR ITU BACT 3
+              url: http://172.23.252.174
+              icon: si:mikrotik
+
+            - title: RTR ITU Tunuyán
+              url: http://172.23.252.42
+              icon: si:mikrotik
+
+            - title: RTR ITU Rivadavia
+              url: http://172.23.252.138
+              icon: si:mikrotik
+
+            - title: RTR ITU Alvear
+              url: http://172.17.251.250
+              icon: si:mikrotik
+
+            - title: RTR Ciencias Medicas
+              url: http://172.23.252.162
+              icon: si:mikrotik
+
+            - title: RTR Nave UNCuyo
+              url: http://172.17.252.60
+              icon: si:mikrotik
+
+            - title: RTR Rectorado
+              url: http://172.22.136.4
+              icon: si:mikrotik
+
+            - title: RTR Rectorado Nuevo
+              url: http://172.22.136.24
+              icon: si:mikrotik
+
+            - title: RTR Señal U
+              url: http://172.17.252.4
+              icon: si:mikrotik
+
+            - title: RTR Villa La Angostura
+              url: http://172.17.251.10
+              icon: si:mikrotik
+
+            - title: RTR Ciencias Económicas
+              url: http://172.22.160.126:8080
+              icon: si:mikrotik
+
+
+
+  - name: Switches
+    columns:
+    - size: full
+      widgets:
+
+        - type: monitor
+          cache: 1m
+          title: NODO - Rectorado
+          sites:
+            - title: RTR NODO
+              url: http://localhost
+              icon: si:dell
+
+
+
+  - name: Radios
+    columns:
+    - size: full
+      widgets:
+
+        - type: monitor
+          cache: 1m
+          title: Enlaces PaP - PmP
+          sites:
+
+          - title: AP BACT
+            url: http://172.23.252.170
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: CPE BACT 3 (ITU)
+            url: http://172.23.252.171
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: CPE BACT 1
+            url: http://172.23.252.172
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: AP DAD
+            url: http://172.23.252.195
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: CPE DAD
+            url: http://172.23.252.195
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: AP Señal U - DAD- LAE
+            url: http://192.168.10.200
+            icon: si:ubiquiti
+
+          - title: CPE LAE - Señal U
+            url: http://192.168.10.201
+            icon: si:ubiquiti
+
+          - title: CPE DAD - Señal U
+            url: http://192.168.10.202
+            icon: si:ubiquiti
+
+          - title: AP Magisterio
+            url: http://172.17.252.82
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: CPE Magisterio
+            url: http://172.17.252.83
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: AP Magisterio - Martin Zapata
+            url: http://172.17.252.26
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: CPE Magisterio - Martin Zapata
+            url: http://172.17.252.27
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: AP Comedor [DATOS]
+            url: http://172.17.252.34
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: CPE Comedor [DATOS]
+            url: http://172.17.252.35
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: AP Comedor [TEL]
+            url: http://172.17.252.42
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: CPE Comedor [TEL]
+            url: http://172.17.252.43
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: AP Derecho
+            url: http://172.23.252.202
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: CPE Derecho
+            url: http://172.23.252.203
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: AP FED Campus
+            url: http://172.23.252.114
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: CPE FED Campus
+            url: http://172.23.252.115
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: AP Hospital [DATOS]
+            url: http://172.23.252.146
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: CPE Hospital [DATOS]
+            url: http://172.23.252.147
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: AP Hospital [TEL]
+            url: http://172.22.252.154
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: CPE Hospital [TEL]
+            url: http://172.22.252.155
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: AP Campus Luján
+            url: http://172.23.252.106
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: CPE Campus Luján
+            url: http://172.23.252.107
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: AP Nave UNCuyo
+            url: http://172.17.252.58
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: CPE Nave UNCuyo
+            url: http://172.17.252.59
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: AP Jardín Maternal
+            url: http://172.23.252.186
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: CPE Jardín Maternal
+            url: http://172.23.252.187
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: AP NIDO
+            url: http://172.23.252.218
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: CPE NIDO
+            url: http://172.23.252.219
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: AP Señal U
+            url: http://172.17.252.2
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+          - title: CPE Señal U
+            url: http://172.17.252.3
+            icon: https://companieslogo.com/img/orig/CMBM-60c024d5.png
+
+
+
+  - name: Enlaces
+    columns:
+    - size: full
+      widgets:
+
+        - type: html
+          source: |
+            <table border="1" cellpadding="0" cellspacing="0" style="width:100%">
+
+              <tr style="height:100px;color: var(--color-text-highlight);">
+                <td align="center">DESCRIPCION</td>
+                <td align="center">CONTACTO</td>
+                <td align="center">REFERENCIA <br> Nº CLIENTE <br> IDENTIFICACION</td>
+                <td align="center">DETALLES</td>
+              </tr>
+
+              <tr>
+                <td align="center" colspan="4" style="height:100px">TELECOM<br>0800 888 0800<br>30-54666946-3</td>
+              </tr>
+              <tr style="height:75px;color: var(--color-text-highlight);">
+                <td align="center">ITU Tunuyán</td>
+                <td align="center">Alfio Canal 2616-967847<br>Luis Villafañe 2622-438544 (8:30-17:00)</td>
+                <td align="center">665106/468407</td>
+                <td align="center">Alem & Sarmiento - Tunuyán (CP 5560)<br>LAN TO LAN (10 Mbps) | SW 648453 Port: 1</td>
+              </tr>
+              <tr style="height:75px;color: var(--color-text-highlight);">
+                <td align="center">Escuela de Agricultura</td>
+                <td align="center">Emilio Gutierrez 2625-665217 (14:00-18:00)<br>Luciano Gili 2625-511635 (7:30-12:30)</td>
+                <td align="center">665104/468405</td>
+                <td align="center">Marqués de Aguado 84. Alvear Oeste. Mendoza (CP 5632)<br>LAN TO LAN (10 Mbps) | SW 648453 Port: 2</td>
+              </tr>
+              <tr style="height:75px;color: var(--color-text-highlight);">
+                <td align="center">FCEN Tupungato</td>
+                <td align="center">Jesús Giunta 2616-522036</td>
+                <td align="center">665108 / 468411</td>
+                <td align="center">Centro Regional Universitario - Moreno esq. Leando Alem (CP 5561)<br>LAN TO LAN (10 Mbps) | SW 648453 Port: 3</td>
+              </tr>
+              <tr style="height:75px;color: var(--color-text-highlight);">
+                <td align="center">FCEN Malargüe</td>
+                <td align="center">Jesús Giunta 2616-522036</td>
+                <td align="center">665107/468409</td>
+                <td align="center"> Campus Educativo Municipal II Rosario Vera Peñaloza esq. Fray L. Beltrán - Malargüe<br>LAN TO LAN (10 Mbps) | SW 648453 Port: 4</td>
+              </tr>
+              <tr style="height:75px;color: var(--color-text-highlight);">
+                <td align="center">Campus San Rafael</td>
+                <td align="center">Andrés Peñasco 2604-568773<br>Fabián Talío 2604-632036</td>
+                <td align="center">668383/478795</td>
+                <td align="center">San Martín 352 - San Rafael (CP 5600)<br>LAN TO LAN (50 Mbps) | SW 638382 Port: 1</td>
+              </tr>
+              <tr style="height:75px;color: var(--color-text-highlight);">
+                <td align="center">Campus San Rafael</td>
+                <td align="center">Andrés Peñasco 2604-568773<br>Fabián Talío 2604-632036</td>
+                <td align="center">671217/481230</td>
+                <td align="center">San Martín 352 - San Rafael (CP 5600)<br>Internet (100 Mbps)</td>
+              </tr>      
+              <tr style="height:75px;color: var(--color-text-highlight);">
+                <td align="center">ITU Alvear</td>
+                <td align="center">Alfio Canal 2616-967847<br>Martin Urtiaga 2625-678217</td>
+                <td align="center">671218/481232</td>
+                <td align="center">Chapeaurouge 163 - General Alvear - Mendoza<br>Internet (10 Mbps)</td>
+              </tr>
+
+              <tr>
+                <td align="center" colspan="4" style="height:100px">ITC<br>413 4505</td>
+              </tr>
+              <tr style="height:75px;color: var(--color-text-highlight);">
+                <td align="center">Colegio del Magisterio</td>
+                <td align="center">Daniel López 261 510-1373</td>
+                <td align="center">12587</td>
+                <td align="center">-</td>
+              </tr>
+              <tr style="height:75px;color: var(--color-text-highlight);">
+                <td align="center">Facultad de Educación</td>
+                <td align="center">Franco Braconi 261 575-8488<br>Omar Gutiérrez  261 389-4855</td>
+                <td align="center">26344</td>
+                <td align="center">-</td>
+              </tr>
+              <tr style="height:75px;color: var(--color-text-highlight);">
+                <td align="center">Hospital Universitario</td>
+                <td align="center">Diego Panella 261 578-0481</td>
+                <td align="center">26340</td>
+                <td align="center">-</td>
+              </tr>
+              <tr style="height:75px;color: var(--color-text-highlight);">
+                <td align="center">Colegio Universitario Central (CUC)</td>
+                <td align="center">Ariel Mirasso 261 686-0064</td>
+                <td align="center">12584</td>
+                <td align="center">-</td>
+              </tr>
+              <tr style="height:75px;color: var(--color-text-highlight);">
+                <td align="center">Escuela de Comercio Martín Zapata</td>
+                <td align="center">Osvaldo Vülluz 261 694-3354</td>
+                <td align="center">12585</td>
+                <td align="center">-</td>
+              </tr>
+              <tr style="height:75px;color: var(--color-text-highlight);">
+                <td align="center">Campus del Espacio<br> de la Ciencia y la Tecnología (ECT)	</td>
+                <td align="center">Luis Moyano 261 618-1829</td>
+                <td align="center">12586</td>
+                <td align="center">-</td>
+              </tr>
+              <tr style="height:75px;color: var(--color-text-highlight);">
+                <td align="center">Escuela de Lenguas Extranjeras</td>
+                <td align="center">Juan Pablo Arango 261 597-5621</td>
+                <td align="center">16525</td>
+                <td align="center">-</td>
+              </tr>
+              <tr style="height:75px;color: var(--color-text-highlight);">
+                <td align="center">Aulas para el Tiempo Libre</td>
+                <td align="center">Adriana 261 540-3283</td>
+                <td align="center">37565</td>
+                <td align="center">-</td>
+              </tr>
+              <tr style="height:75px;color: var(--color-text-highlight);">
+                <td align="center">Hospital Luis Lagomaggiore</td>
+                <td align="center">Adolgo Barrionuevo 261 537-7689</td>
+                <td align="center">46588</td>
+                <td align="center">-</td>
+              </tr>
+              <tr style="height:75px;color: var(--color-text-highlight);">
+                <td align="center">Campus Luján</td>
+                <td align="center">Eduardo Militello 261 651-0435</td>
+                <td align="center">12583</td>
+                <td align="center">-</td>
+              </tr>
+
+
+            </table>
